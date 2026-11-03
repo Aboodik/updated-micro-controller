@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "Thor_Power")(type "KiCad")(uri "${KIPRJMOD}/Thor_Power.kicad_sym")(options "")(descr "Thor custom symbols"))
+)

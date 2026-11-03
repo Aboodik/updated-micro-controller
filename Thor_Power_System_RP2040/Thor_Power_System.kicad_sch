@@ -1,0 +1,87 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid ed5d7d71-6477-43ac-b0fa-f098348d5294)
+
+  (paper "A4")
+
+  (title_block
+    (title "Thor Power Board - Monitoring, Protection, MCU")
+    (date "2026-11-02")
+    (rev "A")
+    (company "HABET - Iowa State")
+    (comment 1 "Root sheet")
+  )
+
+  (lib_symbols
+  
+  )
+
+  (text "Thor Power Board - Monitoring, Protection and MCU" (at 25.4 25.4 0)
+    (effects (font (size 2.54 2.54) bold) (justify left bottom))
+    (uuid 4920bcd0-48f3-4ff7-9737-f16ea960638d)
+  )
+  (text "Sheets connect through global labels. Nets owned by other blocks:" (at 25.4 33.02 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 17c9fff6-a885-4c06-9aa4-4565dc57c4f9)
+  )
+  (text "5V_REG, 12V_REG  = regulator outputs (into the shunts)   |   5V_USB_OUT, 5V_6A_OUT, 12V_1A_OUT = board outputs" (at 25.4 36.83 0)
+    (effects (font (size 1.0 1.0)) (justify left bottom))
+    (uuid 934b4271-8e86-4ee8-ace0-a7b913404293)
+  )
+  (text "5V_REG_EN, 5V_REG_PG = 5V regulator   |   CHARGER_SELECT/QON/INT/ENABLE = charger (charger I2C shares I2C_SDA/SCL)" (at 25.4 39.37 0)
+    (effects (font (size 1.0 1.0)) (justify left bottom))
+    (uuid eaab90da-9aa6-462e-b4c9-331f38fccffe)
+  )
+  (sheet (at 30.48 55.88) (size 60.96 30.48) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 80d2c3be-f2d2-4b5f-8598-b9cf699de693)
+    (property "Sheetname" "Thor Power Monitoring" (at 30.48 55.1684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Thor_Monitor.kicad_sch" (at 30.48 86.9446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Thor_Power_System"
+        (path "/ed5d7d71-6477-43ac-b0fa-f098348d5294" (page "2"))
+      )
+    )
+  )
+  (sheet (at 106.68 55.88) (size 60.96 30.48) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 5a4db1f7-b6d6-4646-8332-44b9514bc650)
+    (property "Sheetname" "Thor Output Protection (eFuses)" (at 106.68 55.1684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Thor_Protection.kicad_sch" (at 106.68 86.9446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Thor_Power_System"
+        (path "/ed5d7d71-6477-43ac-b0fa-f098348d5294" (page "3"))
+      )
+    )
+  )
+  (sheet (at 182.88 55.88) (size 60.96 30.48) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid cb8f06fb-c6f4-4f20-a6e4-ded34f029fb3)
+    (property "Sheetname" "Thor MCU (bare RP2040)" (at 182.88 55.1684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Thor_MCU_RP2040.kicad_sch" (at 182.88 86.9446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Thor_Power_System"
+        (path "/ed5d7d71-6477-43ac-b0fa-f098348d5294" (page "4"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
