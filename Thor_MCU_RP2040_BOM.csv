@@ -1,0 +1,19 @@
+Quantity,Manufacturer Part Number,Manufacturer,Description,Reference Designator,Qty Per Board,Customer Reference,Notes
+3,RP2040,Raspberry Pi,"Microcontroller, dual Cortex-M0+ 133MHz, QFN-56 7x7mm, -40 to 85C",U301,1,MCU,Replaces the Pico module (SC0917). Exposed pad = GND; needs stencil + reflow
+3,W25Q128JVSIQ,Winbond,"16MB QSPI NOR flash, SOIC-8 208mil, -40 to 85C",U304,1,MCU,Same flash as Raspberry Pi minimal design (IQ = industrial temp)
+3,ABM8-272-T3,Abracon,"Crystal 12MHz 10pF, 3.2x2.5mm 4-pad, -40 to 85C",X301,1,MCU,Same crystal as the Pico
+3,AP2112K-3.3TRG1,Diodes Incorporated,"LDO 3.3V 600mA, SOT-23-5, -40 to 85C",U302,1,MCU,VSYS -> +3V3 (board logic rail)
+3,USBLC6-2SC6,STMicroelectronics,"USB ESD protection, SOT-23-6",U303,1,MCU,On USB D+/D-
+2,USB4105-GF-A,GCT,"USB-C receptacle, USB 2.0, 16-pin, SMT",J301,1,MCU,Programming + bench power
+8,B340A-13-F,Diodes Incorporated,"Schottky diode 40V 3A, SMA","D204, D301",2,MCU,D204 was already on the Pico sheet; D301 is new (USB VBUS -> VSYS)
+4,TL3342F160QG,E-Switch,"Tactile switch SPST-NO, SMD","SW301, SW302",2,MCU,BOOTSEL and RESET
+3,LTST-C191KGKT,Lite-On,"LED green 0603",D302,1,MCU,Status LED on GP25
+4,PREC003SAAN-RC,Sullins,"Pin header 1x3 2.54mm","J302, J303",2,MCU,SWD debug + UART debug
+10,RC0603FR-0727RL,Yageo,"Resistor 27 Ohm 1% 0603","R303, R304",2,MCU,USB series resistors
+10,RC0603FR-075K1L,Yageo,"Resistor 5.1k 1% 0603","R301, R302",2,MCU,USB-C CC pull-downs
+10,RC0603FR-071KL,Yageo,"Resistor 1k 1% 0603","R306, R307, R309",3,MCU,Crystal drive / BOOTSEL / LED
+10,RC0603FR-0710KL,Yageo,"Resistor 10k 1% 0603","R305, R308",1,MCU,R305 RUN pull-up; R308 DNP (footprint only). Plus R204-R206 and R217-R219 already on main BOM
+20,GRM188R71C104KA01D,Murata,"Capacitor 100nF 16V X7R 0603","C304, C305, C306, C307, C308, C309, C310, C311, C314, C315, C318",11,MCU,Decoupling: one at each power pin
+10,GRM188R71C105KA12D,Murata,"Capacitor 1uF 16V X7R 0603","C301, C312, C313",3,MCU,LDO input / VREG_IN / VREG_VOUT
+5,GRM21BR61C106KE15L,Murata,"Capacitor 10uF 16V X5R 0805",C302,1,MCU,LDO output (X5R rated -55C)
+10,GRM1885C1H150JA01D,Murata,"Capacitor 15pF 50V C0G 0603","C316, C317",2,MCU,Crystal load caps
